@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Ubuntu:wght@400;500&display=swap');
+
+@mixin box-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 6px 6px rgba(0, 0, 0, .1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  font-size: 0.625rem;
+}
+
+body {
+  background-color: plum;
+  font-family: 'Ubuntu', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 3rem;
+}
+
+
+.container {
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 5rem 2rem;
+  @include box-shadow;
+  width: 80rem;
+
+  h3 {
+    opacity: 0.5;
+    letter-spacing: 2px;
+  }
+
+  .joke {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 4rem;
+    margin: 5rem auto;
+    max-width: 60rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    background-color: plum;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    @include box-shadow;
+
+    &:active {
+      transform: scale(.98);
+
+    }
+  }
+}
